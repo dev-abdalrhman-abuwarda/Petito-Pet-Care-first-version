@@ -11,13 +11,11 @@ class _MainAppPetScreenState extends State<MainAppPetScreen> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     addPetController.onInit();
   }
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
     addPetController.pageController!.dispose();
   }

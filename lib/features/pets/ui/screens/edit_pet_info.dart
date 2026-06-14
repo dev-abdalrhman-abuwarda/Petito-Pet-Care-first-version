@@ -1,9 +1,7 @@
 part of pets_module;
 
 class EditPetInfo extends StatelessWidget {
-  const EditPetInfo({
-    Key? key
-  }) : super(key: key);
+  const EditPetInfo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +10,7 @@ class EditPetInfo extends StatelessWidget {
       floatingActionButton: Container(
         margin: AppSize.s40.marginBottom,
         child: ElevatedButton(
-          onPressed: (){},
+          onPressed: () {},
           child: const Text("Save"),
         ),
       ),
@@ -39,7 +37,7 @@ class EditPetInfo extends StatelessWidget {
                   //   child: Image.asset(ImageAssets.dog,
                   //   fit: BoxFit.contain,),
                   // ),
-                 const CircleAvatar(
+                  const CircleAvatar(
                     backgroundImage: AssetImage(ImageAssets.dog),
                     radius: 60,
                   ),
@@ -58,15 +56,31 @@ class EditPetInfo extends StatelessWidget {
               ),
             ),
             AppSize.s28.addVerticalSpace,
-            CustomTextFormField(hintText: "Name", validator: (value) => value!.validateUserName()),
+            CustomTextFormField(
+                hintText: "Name",
+                validator: (value) => value!.validateUserName()),
             AppSize.s20.addVerticalSpace,
-            EditPetInfoCard(title: "Age", hint: '4 Years, 2 Months', sheetPage: ( context) => const EditAgeSheet(),),
+            EditPetInfoCard(
+              title: "Age",
+              hint: '4 Years, 2 Months',
+              sheetPage: (context) => const EditAgeSheet(),
+            ),
             AppSize.s20.addVerticalSpace,
-            EditPetInfoCard(title: "Species", hint: 'Dog', sheetPage: ( context) => const EditSpeciesPetSheet(),),
+            EditPetInfoCard(
+              title: "Species",
+              hint: 'Dog',
+              sheetPage: (context) => EditSpeciesPetSheet(),
+            ),
             AppSize.s20.addVerticalSpace,
-            CustomTextFormField(hintText: "Breed", validator: (value) => value!.validateUserName()),
+            CustomTextFormField(
+                hintText: "Breed",
+                validator: (value) => value!.validateUserName()),
             AppSize.s20.addVerticalSpace,
-            EditPetInfoCard(title: "Gender", hint: 'Male', sheetPage: ( context) => const EditGenderPetSheet(),),
+            EditPetInfoCard(
+              title: "Gender",
+              hint: 'Male',
+              sheetPage: (context) => const EditGenderPetSheet(),
+            ),
           ],
         ),
       ),

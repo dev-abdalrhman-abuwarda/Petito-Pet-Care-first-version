@@ -5,6 +5,7 @@ class PetsController extends GetxController{
   final PetRepo petRepo;
   List<PetModel> pets = [];
   final PageController pageController = PageController();
+  final List<AddPetModel> petTypes = AddPetModel.petSpecies;
 
   Future<dynamic> getPets() async {
     pets = await petRepo.getPetsRepo() ;
@@ -32,5 +33,12 @@ class PetsController extends GetxController{
   initEditPet(){
 
   }
+
+  changePetType({required String petType}){
+    for(var item in petTypes){
+      item.isSelect = item.name == petType;
+    }
+  }
+
 
 }

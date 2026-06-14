@@ -13,12 +13,13 @@ class AppConfig extends ChangeNotifier {
   }
 
   onDoneLoading() async {
-    if (shared.accessToken == "") {
-      RouteService.serviceNavi
-          .pushNamedAndRemoveUtils(RouteGenerator.mainAuthScreen);
-    } else {
-      RouteService.serviceNavi
-          .pushNamedAndRemoveUtils(RouteGenerator.mainScreenApp);
-    }
+    // if (shared.accessToken == "") {
+    //   RouteService.serviceNavi
+    //       .pushNamedAndRemoveUtils(RouteGenerator.mainAuthScreen);
+    // } else {
+    //   RouteService.serviceNavi
+    //       .pushNamedAndRemoveUtils(RouteGenerator.mainScreenApp);
+    // }
+    RouteService.serviceNavi.pushNamedAndRemoveUtils(RouteGenerator.mainScreenApp);
   }
 }

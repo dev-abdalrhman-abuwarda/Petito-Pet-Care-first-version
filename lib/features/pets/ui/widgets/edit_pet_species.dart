@@ -1,10 +1,11 @@
 part of pets_module;
 
 class EditSpeciesPetSheet extends StatelessWidget {
-  const EditSpeciesPetSheet({
+  EditSpeciesPetSheet({
     Key? key,
   }) : super(key: key);
 
+  final PetsController petController = Get.find();
 
   @override
   Widget build(BuildContext context) {
@@ -26,17 +27,32 @@ class EditSpeciesPetSheet extends StatelessWidget {
                 style: titleBold,
               )),
           AppSize.s30.addVerticalSpace,
-         Row(
-           children: [
-             SelectionTypeCard(type: "Dog", iconPath: IconAssets.dogType, backgroundColor: ColorManager.secondaryLight, isSelected: false, onTap: () {},),
-           ],
-         ),
+          // ListView.builder(itemBuilder: SelectionTypeCard(type: "",)),
+          Expanded(
+            child: GetBuilder<PetsController>(
+                builder: (GetxController controller) => ListView.builder(
+                      itemBuilder: (context, index) {
+                        final type = petController.petTypes[index];
+                        return SelectionTypeCard(
+                            type: type.name,
+                            iconPath: type.iconPath,
+                            backgroundColor: type.backgroundColor,
+                            isSelected: type.isSelect,
+                            onTap: () {});
+                      },
+                      itemCount: petController.petTypes.length,
+                      shrinkWrap: true,
+                      scrollDirection: Axis.horizontal,
+                    )
+                ),
+          ),
           AppSize.s70.addVerticalSpace,
           ElevatedButton(
               onPressed: () {
                 RouteService.serviceNavi.back();
               },
               child: const Text("Done")),
+          AppSize.s40.addVerticalSpace,
         ],
       ),
     );

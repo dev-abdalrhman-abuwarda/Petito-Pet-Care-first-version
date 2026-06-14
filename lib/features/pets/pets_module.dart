@@ -18,6 +18,8 @@ import 'package:pet_care/utils/extension/responsive_extension.dart';
 import 'package:pet_care/utils/extension/validate_extension.dart';
 import 'package:wheel_chooser/wheel_chooser.dart';
 
+import '../add_pet/add_pet_model/add_pet_model.dart';
+
 part 'controllers/pets_controller.dart';
 part 'model/pet_model.dart';
 part 'repositories/pet_repo.dart';

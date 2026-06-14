@@ -2,6 +2,7 @@ import 'dart:core';
 import 'dart:io';
 
 extension ExtendedString on String {
+
   String? validateEmail() {
     if (trim().isEmpty) {
       return 'Please enter your email address';
