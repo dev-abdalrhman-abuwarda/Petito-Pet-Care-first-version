@@ -1,4 +1,3 @@
-
 <div align="center">
 
 # 🐾 Petito — Pet Care App
@@ -102,15 +101,13 @@
 
 ## 📸 Screenshots
 
-> *(Add your app screenshots here)*
-
 | Onboarding | Home | Vet Booking |
 |---|---|---|
-| ![](#) | ![](#) | ![](#) |
+| <img src="assets/screenshots/onboarding.png" width="200"/> | <img src="assets/screenshots/home.png" width="200"/> | <img src="assets/screenshots/vet_booking.png" width="200"/> |
 
 | Pet Shop | Reminders | Profile |
 |---|---|---|
-| ![](#) | ![](#) | ![](#) |
+| <img src="assets/screenshots/pet_shop.png" width="200"/> | <img src="assets/screenshots/reminder.png" width="200"/> | <img src="assets/screenshots/profile.png" width="200"/> |
 
 ---
 
@@ -166,10 +163,11 @@ petito/
 └── pubspec.yaml
 ```
 
+---
 
-## Usage
-If you wanna access resources manger:
+## 🧩 Usage
 
+If you want to access the resource manager:
 
 ```dart
 # colors
@@ -187,9 +185,7 @@ FontWeightManager.black;
 AppString.bankWithdraw;
 ```
 
-
-# For navigation the project built based on OnGenerateRoute:
-
+For navigation — the project is built based on `OnGenerateRoute`:
 
 ```dart
 # pushNamed
@@ -198,10 +194,9 @@ sl<NavigationService>().navigateTo(Routes.home);
 # pushNamedAndRemoveUntil
 sl<NavigationService>().navigateToAndRemove(Routes.home);
 
-# pop;
+# pop
 sl<NavigationService>().pop();
 ```
-
 
 ---
 
@@ -217,9 +212,3 @@ sl<NavigationService>().pop();
 ## 📄 License
 
 This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
-
----
-
-<div align="center">
-Made with ❤️ for pet lovers 🐾
-</div>
